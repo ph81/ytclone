@@ -1,0 +1,14 @@
+import React from 'react';
+import {render, screen} from '@testing-library/react';
+import {{name}} from './{{name}}.page';
+
+describe('{{name}} component', () => {
+   it('should render', () => {
+       const mockSampleProp = 5;
+       const textQuery = `{{name}} ${mockSampleProp}`
+
+       render(<{{name}} sampleProp={mockSampleProp}/>);
+
+       expect(screen.getByText(textQuery)).toBeInTheDocument();
+   });
+});
